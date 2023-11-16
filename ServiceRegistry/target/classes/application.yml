@@ -1,0 +1,10 @@
+# for not registering its self as service
+eureka:
+  instance:
+    hostname: loaclhost
+  client:                    
+    register-with-eureka: false
+    fetch-registry: false
+    
+server:
+  port: 8761 
