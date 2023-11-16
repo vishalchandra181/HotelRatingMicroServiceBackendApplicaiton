@@ -1,0 +1,26 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: ApiGateway
+    
+  cloud:
+    gateway:
+      routes:
+      - id: UserService
+        uri: lb://UserService
+        predicates:
+         - Path=/users/**
+       
+      - id: HotelService
+        uri: lb://HotelService
+        predicates:
+         - Path=/hotels/** 
+    
+      - id: RatingService
+        uri: lb:/RatingService
+        predicates:
+         - Path=/ratings/**     
+           
+ 
