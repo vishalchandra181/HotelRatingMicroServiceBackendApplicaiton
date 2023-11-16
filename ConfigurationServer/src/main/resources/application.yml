@@ -1,0 +1,14 @@
+server:
+     port: 8085
+
+spring:
+  application:
+    name: ConfigurationServer
+    
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vishalchandra181/microServicesConfiguration
+          clone-on-start: true
+     
